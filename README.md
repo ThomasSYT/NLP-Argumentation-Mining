@@ -8,7 +8,7 @@ A premise may give such a justification:
  **This is because he is the most complete soccer player, with the best technical skills.**
 
 This project aim to mine components of an argument from text. These components are claims, premises, and major claims (a major claim can be thought of as a summary of many different claims). The training data that we use labels each token in a text with a BIO-tag (begin, inside, outside) as well as the type of the argument component: claim, major-claim, premise.
-For example, the above two sentences might be labeled as (after tokenization):![image-20190105220005817](https://github.com/ThomasSYT/NLP-share-task/raw/master/img/image-20190105220005817.png)
+For example, the above two sentences might be labeled as (after tokenization):![image-20190105220005817](https://github.com/ThomasSYT/NLP-Argumentation-Mining/raw/master/img/image-20190105220005817.png)
 
 ## environment and tools
 
@@ -70,11 +70,11 @@ Through experiments, we found that the use of two layers of Bi-LSTM not only spe
 
 One layer of Bi-LSTM(5 repeats):
 
-![image-20190108175651132](https://github.com/ThomasSYT/NLP-share-task/raw/master/img/image-20190108175651132.png)
+![image-20190108175651132](https://github.com/ThomasSYT/NLP-Argumentation-Mining/raw/master/img/image-20190108175651132.png)
 
 Two  layers of Bi-LSTM(the best result of 5 repeats):
 
-![image-20190108175744469](https://github.com/ThomasSYT/NLP-share-task/raw/master/img/img-24.png)
+![image-20190108175744469](https://github.com/ThomasSYT/NLP-Argumentation-Mining/raw/master/img/img-24.png)
 
 ### Dense
 
@@ -82,7 +82,7 @@ Since the task is sequence tagging, our Bi-LSTM should output a sequence. After 
 
 Here is the model hierarchy:
 
-![seq2seq_model](https://github.com/ThomasSYT/NLP-share-task/raw/master/img/model.png)
+![seq2seq_model](https://github.com/ThomasSYT/NLP-Argumentation-Mining/raw/master/img/model.png)
 
 ### Hyperparameter optimization
 
@@ -124,4 +124,4 @@ The best f1 scores of each model are shown as followed:
 
 In the trial phase, the results of the current model rank first in the team displayed on the site(https://competitions.codalab.org/competitions/19092#results).
 
-![image-20190108180414971](https://github.com/ThomasSYT/NLP-share-task/raw/master/img/image-20190108180414971.png)
+![image-20190108180414971](https://github.com/ThomasSYT/NLP-Argumentation-Mining/raw/master/img/image-20190108180414971.png)
